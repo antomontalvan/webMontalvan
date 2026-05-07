@@ -1,9 +1,15 @@
 <a href="{{ url }}" class="group rounded-2xl bg-white border border-zinc-200 hover:border-brand-300 hover:shadow-xl transition-all p-8 flex flex-col">
-    <div class="w-14 h-14 rounded-xl bg-brand-50 group-hover:bg-brand-100 transition-colors flex items-center justify-center mb-6">
+    <div class="w-16 h-16 rounded-xl bg-brand-50 group-hover:bg-brand-100 transition-colors flex items-center justify-center mb-6 text-brand-700">
         {{ if icon }}
-            {{ icon }}<img src="{{ url }}" alt="" class="w-7 h-7">{{ /icon }}
+            {{ icon }}<img src="{{ url }}" alt="" class="w-10 h-10 object-contain">{{ /icon }}
+        {{ elseif slug == 'transporte' }}
+            {{ partial:partials/icons/truck }}
+        {{ elseif slug == 'deposito-fiscal' }}
+            {{ partial:partials/icons/container }}
+        {{ elseif slug == 'construcciones' }}
+            {{ partial:partials/icons/excavator }}
         {{ else }}
-            <svg class="w-7 h-7 text-brand-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7l9-4 9 4M4 10v8a2 2 0 002 2h12a2 2 0 002-2v-8M9 14h6"/></svg>
+            <svg class="w-9 h-9" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 7l9-4 9 4M4 10v8a2 2 0 002 2h12a2 2 0 002-2v-8M9 14h6"/></svg>
         {{ /if }}
     </div>
     <h3 class="text-xl font-bold text-zinc-900 group-hover:text-brand-700 transition-colors">{{ title }}</h3>

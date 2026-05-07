@@ -1,11 +1,13 @@
 ---
 id: construcciones
 blueprint: service
-title: 'Construcciones'
+title: Construcciones
 slug: construcciones
 order: 3
 short_description: 'Obras industriales, depósitos, ampliaciones y mantenimiento edilicio para empresas.'
 hero_subtitle: 'Equipo propio para ejecutar y mantener tu infraestructura logística.'
 seo_title: 'Construcciones | Montalván'
 seo_description: 'Construcciones industriales, depósitos, ampliaciones y mantenimiento edilicio.'
+updated_by: 3fcab919-9bd4-4db5-8f93-bf9cc9b2d336
+updated_at: 1778174628
 ---
