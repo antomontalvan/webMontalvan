@@ -1,0 +1,16 @@
+tree:
+  -
+    entry: home
+  -
+    entry: institucional
+  -
+    entry: servicios
+    children:
+      -
+        entry: transporte
+      -
+        entry: deposito-fiscal
+      -
+        entry: construcciones
+  -
+    entry: contacto

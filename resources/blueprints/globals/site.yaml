@@ -1,0 +1,42 @@
+title: 'Sitio'
+tabs:
+  main:
+    display: 'Configuración del sitio'
+    sections:
+      -
+        fields:
+          -
+            handle: site_logo
+            field:
+              type: assets
+              container: site
+              max_files: 1
+              display: 'Logo principal'
+              instructions: 'Aparece en el header. SVG o PNG transparente recomendado.'
+          -
+            handle: site_logo_dark
+            field:
+              type: assets
+              container: site
+              max_files: 1
+              display: 'Logo para fondo oscuro (footer)'
+              instructions: 'Versión clara del logo, opcional.'
+          -
+            handle: favicon
+            field:
+              type: assets
+              container: site
+              max_files: 1
+              display: 'Favicon'
+              instructions: 'Ícono que aparece en la pestaña del navegador. PNG 512x512 o SVG.'
+          -
+            handle: footer_text
+            field:
+              type: bard
+              display: 'Texto del footer'
+              save_html: true
+              buttons:
+                - bold
+                - italic
+                - unorderedlist
+              instructions: 'Texto adicional que aparece en el footer.'

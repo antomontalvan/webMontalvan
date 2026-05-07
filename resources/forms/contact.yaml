@@ -1,0 +1,9 @@
+title: 'Contacto'
+honeypot: hp
+email:
+  -
+    to: '{{ config:mail:from:address }}'
+    from: '{{ config:mail:from:address }}'
+    reply_to: '{{ email }}'
+    subject: 'Nueva consulta desde el sitio web'
+store: true

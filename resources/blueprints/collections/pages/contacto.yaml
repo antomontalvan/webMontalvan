@@ -1,0 +1,92 @@
+title: 'Contacto'
+tabs:
+  main:
+    display: Contenido
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              display: Título
+              default: 'Contacto'
+          -
+            handle: hero_image
+            field:
+              type: assets
+              container: site
+              max_files: 1
+              display: 'Imagen de encabezado'
+          -
+            handle: intro
+            field:
+              type: bard
+              display: 'Texto introductorio'
+              save_html: true
+              buttons:
+                - bold
+                - italic
+                - unorderedlist
+                - h2
+                - h3
+          -
+            handle: form_section
+            field:
+              type: section
+              display: 'Formulario de contacto'
+          -
+            handle: form_title
+            field:
+              type: text
+              display: 'Título del formulario'
+              default: 'Envianos tu consulta'
+          -
+            handle: form_handle
+            field:
+              type: text
+              display: 'Formulario (handle)'
+              default: contact
+              instructions: 'Identificador del formulario a mostrar. Por defecto "contact".'
+              read_only: true
+          -
+            handle: map_section
+            field:
+              type: section
+              display: 'Mapa y datos de contacto'
+          -
+            handle: map_embed
+            field:
+              type: textarea
+              display: 'Código embebido del mapa (Google Maps)'
+              instructions: 'Pegá el iframe de Google Maps. Si lo dejás vacío no se muestra.'
+  sidebar:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              read_only: true
+              display: 'URL (slug)'
+          -
+            handle: seo_title
+            field:
+              type: text
+              display: 'Título SEO'
+          -
+            handle: seo_description
+            field:
+              type: textarea
+              character_limit: 160
+              display: 'Descripción SEO'
+          -
+            handle: seo_image
+            field:
+              type: assets
+              container: site
+              max_files: 1
+              display: 'Imagen para redes'

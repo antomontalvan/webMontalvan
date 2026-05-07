@@ -1,5 +1,6 @@
-title: Pages
+title: Páginas
 structure:
   root: true
 route: '{parent_uri}/{slug}'
+template: pages/page
 propagate: true

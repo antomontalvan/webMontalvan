@@ -1,16 +1,15 @@
 ---
-title: Home
 id: home
-template: home
-blueprint: pages
+blueprint: home
+title: 'Montalván | Distribución y Logística'
+template: pages/home
+hero_title: 'Distribución y logística con más de 40 años de experiencia'
+hero_subtitle: 'Transporte terrestre, marítimo y aéreo. Depósito fiscal de 5.000 m². Construcciones industriales.'
+hero_cta_label: 'Conocenos'
+services_title: 'Nuestros servicios'
+services_intro: 'Soluciones integrales para tu cadena logística.'
+about_title: 'Más de 40 años de experiencia'
+strengths_title: 'Por qué elegirnos'
+cta_title: '¿Necesitás una cotización?'
+cta_button_label: 'Contactanos'
 ---
-## Welcome to your brand new Statamic site!
-
-Not sure what to do next? Here are a few ideas, but feel free to explore in your own way, in your own time.
-
-- [Jump into the Control Panel](/cp) and edit this page or begin setting up your own collections and blueprints.
-- [Head to the docs](https://statamic.dev) and learn how Statamic works.
-- [Watch some Statamic videos](https://youtube.com/statamic) on YouTube.
-- [Join our Discord chat](https://statamic.com/discord) and meet thousands of other Statamic developers.
-- [Start a discussion](https://github.com/statamic/cms/discussions) and get answers to your questions.
-- [Star Statamic on Github](https://github.com/statamic/cms) if you enjoy using it!

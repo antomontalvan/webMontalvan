@@ -1,0 +1,25 @@
+{{# HERO #}}
+<section class="relative bg-gradient-to-br from-brand-900 to-brand-800 text-white py-24 lg:py-32">
+    {{ if hero_image }}
+        {{ hero_image }}
+            <img src="{{ url }}" alt="" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-950/85 to-brand-900/60"></div>
+        {{ /hero_image }}
+    {{ /if }}
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">{{ hero_title ?? title }}</h1>
+        {{ if hero_subtitle }}<p class="mt-4 text-lg text-zinc-200 max-w-3xl">{{ hero_subtitle }}</p>{{ /if }}
+    </div>
+</section>
+
+{{# LISTADO #}}
+<section class="py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {{ collection:services sort="order:asc" }}
+                {{ partial:partials/service_card }}
+            {{ /collection:services }}
+        </div>
+    </div>
+</section>
+

@@ -1,0 +1,9 @@
+title: Empresa
+data:
+  company_name: 'Montalván S.A.'
+  tagline: 'Distribución y logística'
+  founded_year: 1980
+  address_city: 'San Fernando'
+  address_state: 'Buenos Aires'
+  address_country: 'Argentina'
+  whatsapp_message: 'Hola, me gustaría hacer una consulta.'

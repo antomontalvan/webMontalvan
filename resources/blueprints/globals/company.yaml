@@ -1,0 +1,138 @@
+title: 'Empresa'
+tabs:
+  main:
+    display: 'Datos de la empresa'
+    sections:
+      -
+        fields:
+          -
+            handle: company_name
+            field:
+              type: text
+              display: 'Razón social / Nombre'
+              default: 'Montalván S.A.'
+          -
+            handle: tagline
+            field:
+              type: text
+              display: 'Lema / Tagline'
+              instructions: 'Frase corta que describe la empresa (aparece en el footer).'
+              default: 'Distribución y logística'
+          -
+            handle: cuit
+            field:
+              type: text
+              display: 'CUIT'
+              instructions: 'Formato: XX-XXXXXXXX-X'
+          -
+            handle: founded_year
+            field:
+              type: integer
+              display: 'Año de fundación'
+              default: 1980
+      -
+        display: 'Contacto'
+        fields:
+          -
+            handle: phone
+            field:
+              type: text
+              display: 'Teléfono'
+              instructions: 'Ej: +54 11 4744-0000'
+          -
+            handle: phone_2
+            field:
+              type: text
+              display: 'Teléfono alternativo'
+          -
+            handle: whatsapp
+            field:
+              type: text
+              display: 'WhatsApp (sólo números, con código de país)'
+              instructions: 'Ej: 5491155555555 (sin +, espacios ni guiones).'
+          -
+            handle: whatsapp_message
+            field:
+              type: textarea
+              display: 'Mensaje predeterminado de WhatsApp'
+              default: 'Hola, me gustaría hacer una consulta.'
+          -
+            handle: email
+            field:
+              type: text
+              input_type: email
+              display: 'Email principal'
+          -
+            handle: email_contact
+            field:
+              type: text
+              input_type: email
+              display: 'Email para formulario de contacto'
+              instructions: 'A dónde llegan las consultas del sitio.'
+      -
+        display: 'Dirección'
+        fields:
+          -
+            handle: address_street
+            field:
+              type: text
+              display: 'Calle y número'
+          -
+            handle: address_city
+            field:
+              type: text
+              display: 'Ciudad'
+              default: 'San Fernando'
+          -
+            handle: address_state
+            field:
+              type: text
+              display: 'Provincia'
+              default: 'Buenos Aires'
+          -
+            handle: address_country
+            field:
+              type: text
+              display: 'País'
+              default: 'Argentina'
+          -
+            handle: address_zip
+            field:
+              type: text
+              display: 'Código postal'
+          -
+            handle: working_hours
+            field:
+              type: bard
+              display: 'Horarios de atención'
+              save_html: true
+              buttons:
+                - bold
+                - italic
+                - unorderedlist
+              instructions: 'Ej: Lunes a viernes de 8 a 18 hs.'
+  social:
+    display: 'Redes sociales'
+    sections:
+      -
+        fields:
+          -
+            handle: social_facebook
+            field:
+              type: text
+              display: 'Facebook (URL completa)'
+          -
+            handle: social_instagram
+            field:
+              type: text
+              display: 'Instagram (URL completa)'
+          -
+            handle: social_linkedin
+            field:
+              type: text
+              display: 'LinkedIn (URL completa)'
+          -
+            handle: social_youtube
+            field:
+              type: text
+              display: 'YouTube (URL completa)'

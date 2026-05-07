@@ -1,0 +1,6 @@
+title: Servicios
+route: '/servicios/{slug}'
+sort_dir: asc
+sort_field: order
+template: services/show
+mount: services

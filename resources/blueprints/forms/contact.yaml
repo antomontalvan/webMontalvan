@@ -1,0 +1,51 @@
+title: 'Formulario de contacto'
+tabs:
+  main:
+    sections:
+      -
+        fields:
+          -
+            handle: name
+            field:
+              type: text
+              required: true
+              validate: 'required'
+              display: 'Nombre y apellido'
+              input_type: text
+          -
+            handle: email
+            field:
+              type: text
+              required: true
+              validate: 'required|email'
+              display: Email
+              input_type: email
+          -
+            handle: phone
+            field:
+              type: text
+              display: 'Teléfono'
+              input_type: tel
+          -
+            handle: company
+            field:
+              type: text
+              display: Empresa
+          -
+            handle: subject
+            field:
+              type: select
+              display: 'Tipo de consulta'
+              options:
+                transporte: 'Cotización de transporte'
+                deposito: 'Depósito fiscal'
+                construcciones: 'Construcciones'
+                otro: 'Otra consulta'
+              default: otro
+          -
+            handle: message
+            field:
+              type: textarea
+              required: true
+              validate: 'required'
+              display: 'Mensaje'

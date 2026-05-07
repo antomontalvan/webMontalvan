@@ -1,0 +1,56 @@
+<header x-data="{ open: false, scrolled: false }"
+        @scroll.window="scrolled = window.scrollY > 50"
+        :class="scrolled ? 'bg-white/95 backdrop-blur shadow-sm' : 'bg-white'"
+        class="sticky top-0 z-40 transition-all duration-200 border-b border-zinc-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+
+            {{# Logo #}}
+            <a href="/" class="flex items-center gap-3 shrink-0">
+                {{ if site:site_logo }}
+                    {{ site:site_logo }}
+                        <img src="{{ url }}" alt="{{ company:company_name }}" class="h-10 w-auto">
+                    {{ /site:site_logo }}
+                {{ else }}
+                    <div class="text-2xl font-bold text-brand-800 tracking-tight">{{ company:company_name ?? 'Montalván' }}</div>
+                {{ /if }}
+            </a>
+
+            {{# Desktop nav #}}
+            <nav class="hidden lg:flex items-center gap-8">
+                {{ nav:main }}
+                    <a href="{{ url }}"
+                       class="text-sm font-medium text-zinc-700 hover:text-brand-700 transition-colors {{ if is_current || is_parent }}text-brand-700{{ /if }}">
+                        {{ title }}
+                    </a>
+                {{ /nav:main }}
+                <a href="/contacto" class="ml-2 inline-flex items-center px-5 py-2.5 text-sm font-semibold rounded-lg bg-brand-700 text-white hover:bg-brand-800 transition-colors">
+                    Cotizar
+                </a>
+            </nav>
+
+            {{# Mobile menu button #}}
+            <button @click="open = !open" class="lg:hidden p-2 -mr-2 text-zinc-700">
+                <svg x-show="!open" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+                <svg x-show="open" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+
+        {{# Mobile nav #}}
+        <nav x-show="open" x-cloak class="lg:hidden pb-6 space-y-1 border-t border-zinc-100 pt-4">
+            {{ nav:main }}
+                <a href="{{ url }}"
+                   class="block px-3 py-2 text-base font-medium text-zinc-700 hover:bg-zinc-50 rounded-md {{ if is_current || is_parent }}text-brand-700 bg-brand-50{{ /if }}">
+                    {{ title }}
+                </a>
+            {{ /nav:main }}
+            <a href="/contacto" class="block px-3 py-2 mt-3 text-center font-semibold rounded-lg bg-brand-700 text-white">
+                Cotizar
+            </a>
+        </nav>
+    </div>
+</header>

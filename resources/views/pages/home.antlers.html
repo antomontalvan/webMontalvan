@@ -1,0 +1,136 @@
+{{# HERO #}}
+<section class="relative isolate min-h-[600px] lg:min-h-[720px] flex items-center text-white overflow-hidden">
+    {{ if hero_image }}
+        {{ hero_image }}
+            <img src="{{ url }}" alt="" class="absolute inset-0 -z-10 w-full h-full object-cover">
+        {{ /hero_image }}
+    {{ else }}
+        <div class="absolute inset-0 -z-10 bg-gradient-to-br from-brand-900 via-brand-800 to-brand-700"></div>
+    {{ /if }}
+    <div class="absolute inset-0 -z-10 bg-gradient-to-r from-brand-950/85 via-brand-900/70 to-brand-900/40"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 w-full">
+        <div class="max-w-3xl">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
+                {{ hero_title }}
+            </h1>
+            {{ if hero_subtitle }}
+                <p class="mt-6 text-lg sm:text-xl text-zinc-200 leading-relaxed max-w-2xl">{{ hero_subtitle }}</p>
+            {{ /if }}
+            {{ if hero_cta_label && hero_cta_link }}
+                <div class="mt-10 flex flex-wrap gap-4">
+                    <a href="{{ hero_cta_link }}" class="inline-flex items-center px-8 py-4 rounded-lg bg-accent-500 text-brand-950 font-semibold hover:bg-accent-600 transition-colors">
+                        {{ hero_cta_label }}
+                        <svg class="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </a>
+                    <a href="/contacto" class="inline-flex items-center px-8 py-4 rounded-lg bg-white/10 backdrop-blur text-white font-semibold hover:bg-white/20 transition-colors">
+                        Solicitar cotización
+                    </a>
+                </div>
+            {{ /if }}
+        </div>
+    </div>
+</section>
+
+{{# SERVICIOS #}}
+<section class="py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-zinc-900 tracking-tight">{{ services_title ?? 'Nuestros servicios' }}</h2>
+            {{ if services_intro }}
+                <p class="mt-4 text-lg text-zinc-600">{{ services_intro }}</p>
+            {{ /if }}
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {{ if featured_services | count > 0 }}
+                {{ featured_services }}
+                    {{ partial:partials/service_card }}
+                {{ /featured_services }}
+            {{ else }}
+                {{ collection:services sort="order:asc" }}
+                    {{ partial:partials/service_card }}
+                {{ /collection:services }}
+            {{ /if }}
+        </div>
+    </div>
+</section>
+
+{{# INSTITUCIONAL #}}
+{{ if about_title || about_text }}
+<section class="py-20 lg:py-28 bg-zinc-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div>
+                {{ if about_image }}
+                    {{ about_image }}
+                        <img src="{{ url }}" alt="" class="rounded-2xl shadow-xl w-full h-auto object-cover aspect-[4/3]">
+                    {{ /about_image }}
+                {{ else }}
+                    <div class="rounded-2xl bg-gradient-to-br from-brand-700 to-brand-900 aspect-[4/3] flex items-center justify-center text-white/30 text-sm">Imagen institucional</div>
+                {{ /if }}
+            </div>
+            <div>
+                <h2 class="text-3xl sm:text-4xl font-bold text-zinc-900 tracking-tight">{{ about_title }}</h2>
+                {{ if about_text }}
+                    <div class="mt-6 prose prose-lg text-zinc-600">{{ about_text }}</div>
+                {{ /if }}
+                {{ if about_cta_label && about_cta_link }}
+                    <div class="mt-8">
+                        <a href="{{ about_cta_link }}" class="inline-flex items-center px-6 py-3 rounded-lg bg-brand-700 text-white font-semibold hover:bg-brand-800 transition-colors">
+                            {{ about_cta_label }}
+                            <svg class="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        </a>
+                    </div>
+                {{ /if }}
+            </div>
+        </div>
+    </div>
+</section>
+{{ /if }}
+
+{{# FORTALEZAS #}}
+{{ if strengths | count > 0 }}
+<section class="py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-zinc-900 tracking-tight">{{ strengths_title ?? 'Por qué elegirnos' }}</h2>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {{ strengths }}
+                <div class="text-center group">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-brand-50 flex items-center justify-center group-hover:bg-brand-100 transition-colors">
+                        {{ if icon }}
+                            {{ icon }}<img src="{{ url }}" alt="" class="w-8 h-8">{{ /icon }}
+                        {{ else }}
+                            <svg class="w-8 h-8 text-brand-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                        {{ /if }}
+                    </div>
+                    <h3 class="font-semibold text-zinc-900 text-lg">{{ title }}</h3>
+                    {{ if description }}<p class="mt-2 text-sm text-zinc-600 leading-relaxed">{{ description }}</p>{{ /if }}
+                </div>
+            {{ /strengths }}
+        </div>
+    </div>
+</section>
+{{ /if }}
+
+{{# CTA CONTACTO #}}
+{{ if cta_title }}
+<section class="py-20">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="rounded-3xl bg-gradient-to-br from-brand-800 to-brand-950 px-8 py-16 sm:px-16 sm:py-20 text-center text-white">
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">{{ cta_title }}</h2>
+            {{ if cta_text }}<p class="mt-4 text-lg text-zinc-200 max-w-2xl mx-auto">{{ cta_text }}</p>{{ /if }}
+            {{ if cta_button_label }}
+                <div class="mt-8">
+                    <a href="{{ cta_button_link ?? '/contacto' }}" class="inline-flex items-center px-8 py-4 rounded-lg bg-accent-500 text-brand-950 font-semibold hover:bg-accent-600 transition-colors">
+                        {{ cta_button_label }}
+                    </a>
+                </div>
+            {{ /if }}
+        </div>
+    </div>
+</section>
+{{ /if }}
+

@@ -1,0 +1,91 @@
+{{# HERO #}}
+<section class="relative bg-gradient-to-br from-brand-900 to-brand-800 text-white py-24 lg:py-32">
+    {{ if hero_image }}
+        {{ hero_image }}
+            <img src="{{ url }}" alt="" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-950/85 to-brand-900/50"></div>
+        {{ /hero_image }}
+    {{ /if }}
+    <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav class="flex items-center gap-2 text-sm text-zinc-300 mb-6">
+            <a href="/" class="hover:text-white">Inicio</a>
+            <span>/</span>
+            <a href="/servicios" class="hover:text-white">Servicios</a>
+            <span>/</span>
+            <span class="text-white">{{ title }}</span>
+        </nav>
+        <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">{{ title }}</h1>
+        {{ if hero_subtitle || short_description }}
+            <p class="mt-4 text-lg text-zinc-200 max-w-3xl">{{ hero_subtitle ?? short_description }}</p>
+        {{ /if }}
+    </div>
+</section>
+
+{{# CONTENIDO #}}
+{{ if content }}
+<section class="py-16 lg:py-24">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg prose-zinc">
+        {{ content }}
+    </div>
+</section>
+{{ /if }}
+
+{{# DESTACADOS #}}
+{{ if highlights | count > 0 }}
+<section class="py-16 lg:py-24 bg-zinc-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-zinc-900 text-center mb-12">Características</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {{ highlights }}
+                <div class="bg-white p-8 rounded-2xl border border-zinc-200">
+                    <div class="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center mb-4">
+                        {{ if icon }}
+                            {{ icon }}<img src="{{ url }}" alt="" class="w-6 h-6">{{ /icon }}
+                        {{ else }}
+                            <svg class="w-6 h-6 text-brand-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                        {{ /if }}
+                    </div>
+                    <h3 class="text-lg font-bold text-zinc-900">{{ title }}</h3>
+                    {{ if description }}<p class="mt-2 text-zinc-600 leading-relaxed">{{ description }}</p>{{ /if }}
+                </div>
+            {{ /highlights }}
+        </div>
+    </div>
+</section>
+{{ /if }}
+
+{{# GALERÍA #}}
+{{ if gallery | count > 0 }}
+<section class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-zinc-900 text-center mb-12">Galería</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {{ gallery }}
+                <a href="{{ url }}" target="_blank" class="block aspect-square overflow-hidden rounded-xl group">
+                    <img src="{{ url }}" alt="{{ alt ?? title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+                </a>
+            {{ /gallery }}
+        </div>
+    </div>
+</section>
+{{ /if }}
+
+{{# CTA #}}
+<section class="py-20 bg-gradient-to-br from-brand-800 to-brand-950 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">¿Necesitás más información?</h2>
+        <p class="mt-4 text-lg text-zinc-200">Conversemos sobre cómo podemos ayudarte.</p>
+        <div class="mt-8 flex flex-wrap justify-center gap-4">
+            <a href="/contacto" class="inline-flex items-center px-8 py-4 rounded-lg bg-accent-500 text-brand-950 font-semibold hover:bg-accent-600 transition-colors">
+                Pedir cotización
+            </a>
+            {{ if company:whatsapp }}
+            <a href="https://wa.me/{{ company:whatsapp }}" target="_blank" rel="noopener" class="inline-flex items-center px-8 py-4 rounded-lg bg-white/10 text-white font-semibold hover:bg-white/20 transition-colors">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.413c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24z"/></svg>
+                WhatsApp
+            </a>
+            {{ /if }}
+        </div>
+    </div>
+</section>
+

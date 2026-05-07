@@ -70,6 +70,15 @@ return [
             'report' => false,
         ],
 
+        'site_assets' => [
+            'driver' => 'local',
+            'root' => public_path('assets/site'),
+            'url' => '/assets/site',
+            'visibility' => 'public',
+            'throw' => false,
+            'report' => false,
+        ],
+
     ],
 
     /*

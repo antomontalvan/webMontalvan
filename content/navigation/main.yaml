@@ -1,0 +1,6 @@
+title: 'Navegación principal'
+collections:
+  - pages
+  - services
+expects_root: false
+max_depth: 2
