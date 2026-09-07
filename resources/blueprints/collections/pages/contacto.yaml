@@ -8,6 +8,7 @@ tabs:
           -
             handle: title
             field:
+              localizable: true
               type: text
               required: true
               display: Título
@@ -22,6 +23,7 @@ tabs:
           -
             handle: intro
             field:
+              localizable: true
               type: bard
               display: 'Texto introductorio'
               save_html: true
@@ -39,6 +41,7 @@ tabs:
           -
             handle: form_title
             field:
+              localizable: true
               type: text
               display: 'Título del formulario'
               default: 'Envianos tu consulta'
@@ -58,6 +61,7 @@ tabs:
           -
             handle: map_embed
             field:
+              localizable: true
               type: textarea
               display: 'Código embebido del mapa (Google Maps)'
               instructions: 'Pegá el iframe de Google Maps. Si lo dejás vacío no se muestra.'
@@ -69,17 +73,20 @@ tabs:
           -
             handle: slug
             field:
+              localizable: true
               type: slug
               read_only: true
               display: 'URL (slug)'
           -
             handle: seo_title
             field:
+              localizable: true
               type: text
               display: 'Título SEO'
           -
             handle: seo_description
             field:
+              localizable: true
               type: textarea
               character_limit: 160
               display: 'Descripción SEO'

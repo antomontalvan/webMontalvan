@@ -1,0 +1,10 @@
+default:
+  name: Español
+  url: /
+  locale: es_AR
+  lang: es
+en:
+  name: English
+  url: /en/
+  locale: en_US
+  lang: en

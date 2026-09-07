@@ -8,6 +8,7 @@ tabs:
           -
             handle: title
             field:
+              localizable: true
               type: text
               required: true
               validate: 'required'
@@ -30,12 +31,14 @@ tabs:
           -
             handle: hero_title
             field:
+              localizable: true
               type: text
               display: 'Título del encabezado'
               instructions: 'Si está vacío se usa el título de la página.'
           -
             handle: hero_subtitle
             field:
+              localizable: true
               type: textarea
               display: 'Bajada del encabezado'
               instructions: 'Texto corto debajo del título del encabezado.'
@@ -47,6 +50,7 @@ tabs:
           -
             handle: content
             field:
+              localizable: true
               type: bard
               display: Contenido
               save_html: false
@@ -94,12 +98,14 @@ tabs:
           -
             handle: seo_title
             field:
+              localizable: true
               type: text
               display: 'Título SEO'
               instructions: 'Título para Google. Si está vacío se usa el título normal.'
           -
             handle: seo_description
             field:
+              localizable: true
               type: textarea
               character_limit: 160
               display: 'Descripción SEO'

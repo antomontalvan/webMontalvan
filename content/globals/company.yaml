@@ -1,4 +1,7 @@
 title: Empresa
+sites:
+  default: null
+  en: default
 data:
   company_name: 'Montalván S.A.'
   tagline: 'Distribución y logística'

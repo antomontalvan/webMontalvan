@@ -1,0 +1,28 @@
+origin: default
+company_name: 'Transportes Montalvan Sa'
+tagline: 'Distribution and logistics'
+cuit: 30-69475825-4
+founded_year: 1991
+phone: 4714-1722
+whatsapp_departments:
+  -
+    id: KEuiX882
+    label: Sales
+    number: '5491136820124'
+  -
+    id: c73KzD8R
+    label: 'Administration / Customer service'
+    number: '5491123440827'
+  -
+    id: kG2nhLzL
+    label: 'Bonded Warehouse'
+    number: '5491160002276'
+whatsapp_message: 'Hello, I would like to make an inquiry.'
+email: info@montalvan.com.ar
+email_contact: info@montalvan.com.ar
+address_street: 'Avellaneda 5135'
+address_city: 'San Fernando'
+address_state: 'Buenos Aires'
+address_country: Argentina
+address_zip: '1646'
+working_hours: '<p>Monday to Friday, 8:30 am – 1 pm / 2 pm – 4:30 pm</p>'

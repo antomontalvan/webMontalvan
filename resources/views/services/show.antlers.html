@@ -8,9 +8,9 @@
     {{ /if }}
     <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <nav class="flex items-center gap-2 text-sm text-zinc-300 mb-6">
-            <a href="/" class="hover:text-white">Inicio</a>
+            <a href="{{ site:url }}" class="hover:text-white">{{ trans key="Inicio" }}</a>
             <span>/</span>
-            <a href="/servicios" class="hover:text-white">Servicios</a>
+            <a href="{{ link:servicios }}" class="hover:text-white">{{ trans key="Servicios" }}</a>
             <span>/</span>
             <span class="text-white">{{ title }}</span>
         </nav>
@@ -34,7 +34,7 @@
 {{ if highlights | count > 0 }}
 <section class="py-16 lg:py-24 bg-zinc-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-bold text-zinc-900 text-center mb-12">Características</h2>
+        <h2 class="text-3xl font-bold text-zinc-900 text-center mb-12">{{ trans key="Características" }}</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {{ highlights }}
                 <div class="bg-white p-8 rounded-2xl border border-zinc-200">
@@ -58,7 +58,7 @@
 {{ if gallery | count > 0 }}
 <section class="py-16 lg:py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-bold text-zinc-900 text-center mb-12">Galería</h2>
+        <h2 class="text-3xl font-bold text-zinc-900 text-center mb-12">{{ trans key="Galería" }}</h2>
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {{ gallery }}
                 <a href="{{ url }}" target="_blank" class="block aspect-square overflow-hidden rounded-xl group">
@@ -73,11 +73,11 @@
 {{# CTA #}}
 <section class="py-20 bg-gradient-to-br from-brand-800 to-brand-950 text-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">¿Necesitás más información?</h2>
-        <p class="mt-4 text-lg text-zinc-200">Conversemos sobre cómo podemos ayudarte.</p>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">{{ trans key="¿Necesitás más información?" }}</h2>
+        <p class="mt-4 text-lg text-zinc-200">{{ trans key="Conversemos sobre cómo podemos ayudarte." }}</p>
         <div class="mt-8 flex flex-wrap justify-center gap-4">
-            <a href="/contacto" class="inline-flex items-center px-8 py-4 rounded-lg bg-accent-500 text-brand-950 font-semibold hover:bg-accent-600 transition-colors">
-                Pedir cotización
+            <a href="{{ link:contacto }}" class="inline-flex items-center px-8 py-4 rounded-lg bg-accent-500 text-brand-950 font-semibold hover:bg-accent-600 transition-colors">
+                {{ trans key="Pedir cotización" }}
             </a>
             {{ if company:whatsapp }}
             <a href="https://wa.me/{{ company:whatsapp }}" target="_blank" rel="noopener" class="inline-flex items-center px-8 py-4 rounded-lg bg-white/10 text-white font-semibold hover:bg-white/20 transition-colors">

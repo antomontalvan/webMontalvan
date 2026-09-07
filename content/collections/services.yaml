@@ -1,6 +1,12 @@
 title: Servicios
-route: '/servicios/{slug}'
+route:
+  default: '/servicios/{slug}'
+  en: '/services/{slug}'
 sort_dir: asc
 sort_field: order
 template: services/show
 mount: services
+propagate: true
+sites:
+  - default
+  - en

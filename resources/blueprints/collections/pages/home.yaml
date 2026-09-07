@@ -17,6 +17,7 @@ tabs:
           -
             handle: hero_title
             field:
+              localizable: true
               type: text
               required: true
               display: 'Título principal'
@@ -24,18 +25,21 @@ tabs:
           -
             handle: hero_subtitle
             field:
+              localizable: true
               type: textarea
               display: 'Subtítulo'
               instructions: 'Texto descriptivo debajo del título.'
           -
             handle: hero_cta_label
             field:
+              localizable: true
               type: text
               display: 'Texto del botón principal'
               instructions: 'Ej: "Conocenos" o "Pedir cotización".'
           -
             handle: hero_cta_link
             field:
+              localizable: true
               type: link
               display: 'Destino del botón'
               instructions: 'Página interna o URL externa.'
@@ -51,12 +55,14 @@ tabs:
           -
             handle: services_title
             field:
+              localizable: true
               type: text
               display: 'Título de la sección'
               default: 'Nuestros servicios'
           -
             handle: services_intro
             field:
+              localizable: true
               type: textarea
               display: 'Texto introductorio'
           -
@@ -76,12 +82,14 @@ tabs:
           -
             handle: about_title
             field:
+              localizable: true
               type: text
               display: 'Título'
               default: 'Más de 40 años de experiencia'
           -
             handle: about_text
             field:
+              localizable: true
               type: bard
               display: Texto
               save_html: true
@@ -99,12 +107,14 @@ tabs:
           -
             handle: about_cta_label
             field:
+              localizable: true
               type: text
               display: 'Texto del botón'
               default: 'Conocer más'
           -
             handle: about_cta_link
             field:
+              localizable: true
               type: link
               display: 'Destino del botón'
               container: site
@@ -119,12 +129,14 @@ tabs:
           -
             handle: strengths_title
             field:
+              localizable: true
               type: text
               display: 'Título de la sección'
               default: 'Por qué elegirnos'
           -
             handle: strengths
             field:
+              localizable: true
               type: replicator
               display: Fortalezas
               instructions: 'Agregá tantas como quieras (cobertura nacional, flota propia, depósito fiscal, etc).'
@@ -162,23 +174,27 @@ tabs:
           -
             handle: cta_title
             field:
+              localizable: true
               type: text
               display: 'Título del bloque'
               default: '¿Necesitás una cotización?'
           -
             handle: cta_text
             field:
+              localizable: true
               type: textarea
               display: 'Texto'
           -
             handle: cta_button_label
             field:
+              localizable: true
               type: text
               display: 'Texto del botón'
               default: 'Contactanos'
           -
             handle: cta_button_link
             field:
+              localizable: true
               type: link
               display: 'Destino del botón'
               container: site
@@ -192,6 +208,7 @@ tabs:
           -
             handle: title
             field:
+              localizable: true
               type: text
               required: true
               display: 'Título de la página'
@@ -204,11 +221,13 @@ tabs:
           -
             handle: seo_title
             field:
+              localizable: true
               type: text
               display: 'Título SEO'
           -
             handle: seo_description
             field:
+              localizable: true
               type: textarea
               character_limit: 160
               display: 'Descripción SEO'

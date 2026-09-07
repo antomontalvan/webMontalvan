@@ -1,2 +1,5 @@
 title: Sitio
+sites:
+  default: null
+  en: default
 data: {}

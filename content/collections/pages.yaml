@@ -4,3 +4,6 @@ structure:
 route: '{parent_uri}/{slug}'
 template: pages/page
 propagate: true
+sites:
+  - default
+  - en

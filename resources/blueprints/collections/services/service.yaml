@@ -8,6 +8,7 @@ tabs:
           -
             handle: title
             field:
+              localizable: true
               type: text
               required: true
               display: 'Nombre del servicio'
@@ -15,6 +16,7 @@ tabs:
           -
             handle: short_description
             field:
+              localizable: true
               type: textarea
               required: true
               character_limit: 200
@@ -57,6 +59,7 @@ tabs:
           -
             handle: hero_subtitle
             field:
+              localizable: true
               type: textarea
               display: 'Bajada del encabezado'
           -
@@ -67,6 +70,7 @@ tabs:
           -
             handle: content
             field:
+              localizable: true
               type: bard
               display: 'Descripción detallada'
               save_html: false
@@ -93,6 +97,7 @@ tabs:
           -
             handle: highlights
             field:
+              localizable: true
               type: replicator
               display: 'Bullets / Destacados'
               instructions: 'Listado de puntos fuertes (cobertura nacional, seguros, etc).'
@@ -141,6 +146,7 @@ tabs:
           -
             handle: slug
             field:
+              localizable: true
               type: slug
               validate: 'required'
               display: 'URL (slug)'
@@ -158,11 +164,13 @@ tabs:
           -
             handle: seo_title
             field:
+              localizable: true
               type: text
               display: 'Título SEO'
           -
             handle: seo_description
             field:
+              localizable: true
               type: textarea
               character_limit: 160
               display: 'Descripción SEO'

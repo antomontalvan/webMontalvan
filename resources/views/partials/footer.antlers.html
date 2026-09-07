@@ -19,7 +19,7 @@
 
             {{# Col 2: Servicios #}}
             <div>
-                <h3 class="text-white font-semibold text-sm uppercase tracking-wider mb-4">Servicios</h3>
+                <h3 class="text-white font-semibold text-sm uppercase tracking-wider mb-4">{{ trans key="Servicios" }}</h3>
                 <ul class="space-y-2">
                     {{ collection:services sort="order:asc" }}
                         <li><a href="{{ url }}" class="text-zinc-400 hover:text-accent-500 transition-colors text-sm">{{ title }}</a></li>
@@ -29,17 +29,17 @@
 
             {{# Col 3: Empresa #}}
             <div>
-                <h3 class="text-white font-semibold text-sm uppercase tracking-wider mb-4">Empresa</h3>
+                <h3 class="text-white font-semibold text-sm uppercase tracking-wider mb-4">{{ trans key="Empresa" }}</h3>
                 <ul class="space-y-2">
-                    <li><a href="/institucional" class="text-zinc-400 hover:text-accent-500 transition-colors text-sm">Institucional</a></li>
-                    <li><a href="/contacto" class="text-zinc-400 hover:text-accent-500 transition-colors text-sm">Contacto</a></li>
-                    <li><a href="/legales" class="text-zinc-400 hover:text-accent-500 transition-colors text-sm">Aviso Legal</a></li>
+                    <li><a href="{{ link:institucional }}" class="text-zinc-400 hover:text-accent-500 transition-colors text-sm">{{ trans key="Institucional" }}</a></li>
+                    <li><a href="{{ link:contacto }}" class="text-zinc-400 hover:text-accent-500 transition-colors text-sm">{{ trans key="Contacto" }}</a></li>
+                    <li><a href="{{ link:legales }}" class="text-zinc-400 hover:text-accent-500 transition-colors text-sm">{{ trans key="Aviso Legal" }}</a></li>
                 </ul>
             </div>
 
             {{# Col 4: Contacto #}}
             <div>
-                <h3 class="text-white font-semibold text-sm uppercase tracking-wider mb-4">Contacto</h3>
+                <h3 class="text-white font-semibold text-sm uppercase tracking-wider mb-4">{{ trans key="Contacto" }}</h3>
                 <ul class="space-y-3 text-sm text-zinc-400">
                     {{ if company:address_street }}
                         <li class="flex gap-2">
@@ -71,7 +71,7 @@
         </div>
 
         <div class="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between gap-4 text-xs text-zinc-500">
-            <p>&copy; {{ now format="Y" }} {{ company:company_name ?? 'Montalván' }}. Todos los derechos reservados.</p>
+            <p>&copy; {{ now format="Y" }} {{ company:company_name ?? 'Montalván' }}. {{ trans key="Todos los derechos reservados." }}</p>
             <p>{{ if company:cuit }}CUIT: {{ company:cuit }}{{ /if }}</p>
         </div>
     </div>
