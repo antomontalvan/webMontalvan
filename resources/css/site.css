@@ -23,3 +23,56 @@
 
 html { scroll-behavior: smooth; }
 body { font-feature-settings: 'cv02','cv03','cv04','cv11'; }
+
+/* Oculta elementos con x-cloak hasta que Alpine los procesa (evita flash inicial) */
+[x-cloak] { display: none !important; }
+
+/* Hero slider del home */
+.hero-slide {
+    opacity: 0;
+    transition: opacity 1000ms ease-in-out;
+    pointer-events: none;
+}
+/* Antes de que cargue JS: primer slide visible para evitar flash */
+.hero-slider:not(.is-ready) .hero-slide:first-child {
+    opacity: 1;
+}
+/* Cuando JS toma control: solo el slide marcado is-active es visible */
+.hero-slider.is-ready .hero-slide.is-active {
+    opacity: 1;
+}
+
+.hero-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 9999px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: none;
+    cursor: pointer;
+    transition: transform 250ms ease, background-color 250ms ease;
+    padding: 0;
+}
+.hero-dot:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.hero-dot.is-active {
+    background-color: #ffffff;
+    transform: scale(1.4);
+}
+
+.hero-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 9999px;
+    background-color: rgba(0, 0, 0, 0.35);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+    transition: background-color 250ms ease, transform 250ms ease;
+}
+.hero-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}

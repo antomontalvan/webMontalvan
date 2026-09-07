@@ -1,10 +1,13 @@
 name: Sistemas
 super: true
 id: 3fcab919-9bd4-4db5-8f93-bf9cc9b2d336
-password_hash: $2y$12$nQwBFpS6qEfY.y4BYkrnA.Fqy3K.b1uA/5Rj6pQob48er/r/nPKNS
+password_hash: $2y$12$3vmupZFifedyX8ObL1vo3.D78x5yxTPYbG7Xy/CrwWFN3II8hoHJO
 preferences:
   collections:
     pages:
       view: tree
     services:
       view: list
+  formatting_locale: es
+  theme: null
+  color_mode: dark

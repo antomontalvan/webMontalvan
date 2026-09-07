@@ -29,6 +29,19 @@ tabs:
               display: 'Ícono'
               instructions: 'Aparece en las cards. SVG o PNG transparente, ~80x80px.'
           -
+            handle: home_slider_section
+            field:
+              type: section
+              display: 'Slider del Home'
+              instructions: 'Fotos que aparecen rotando en el banner principal del home. Se muestra el nombre del servicio sobre cada foto.'
+          -
+            handle: home_slider_images
+            field:
+              type: assets
+              container: site
+              display: 'Imágenes para el slider del home'
+              instructions: 'Subí varias fotos por servicio. Cada foto rota en el banner del home. Ideal 1920x1080px, horizontales.'
+          -
             handle: hero_section
             field:
               type: section

@@ -3,6 +3,19 @@ tagline: 'Distribución y logística'
 cuit: 30-69475825-4
 founded_year: 1991
 phone: 4714-1722
+whatsapp_departments:
+  -
+    id: KEuiX882
+    label: Ventas
+    number: '5491136820124'
+  -
+    id: c73KzD8R
+    label: 'Administración / Atención al cliente'
+    number: '5491123440827'
+  -
+    id: kG2nhLzL
+    label: 'Depósito Fiscal'
+    number: '5491160002276'
 whatsapp_message: 'Hola, me gustaría hacer una consulta.'
 email: info@montalvan.com.ar
 email_contact: info@montalvan.com.ar

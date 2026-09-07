@@ -45,16 +45,33 @@ tabs:
               type: text
               display: 'Teléfono alternativo'
           -
-            handle: whatsapp
+            handle: whatsapp_departments
             field:
-              type: text
-              display: 'WhatsApp (sólo números, con código de país)'
-              instructions: 'Ej: 5491155555555 (sin +, espacios ni guiones).'
+              type: grid
+              display: 'WhatsApp por departamento'
+              instructions: 'Cada fila es un botón en el panel del ícono flotante. Si todas las filas están sin número, el ícono no se muestra.'
+              mode: stacked
+              reorderable: true
+              add_row: 'Agregar departamento'
+              fields:
+                -
+                  handle: label
+                  field:
+                    type: text
+                    display: 'Nombre del departamento'
+                    instructions: 'Ej: Ventas, Administración, Depósito Fiscal.'
+                -
+                  handle: number
+                  field:
+                    type: text
+                    display: 'Número de WhatsApp'
+                    instructions: 'Sólo dígitos con código de país. Ej: 5491155555555 (sin +, espacios ni guiones).'
           -
             handle: whatsapp_message
             field:
               type: textarea
               display: 'Mensaje predeterminado de WhatsApp'
+              instructions: 'Texto que se pre-carga en el chat al abrir cualquiera de los departamentos.'
               default: 'Hola, me gustaría hacer una consulta.'
           -
             handle: email
