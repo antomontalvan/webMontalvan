@@ -1,7 +1,7 @@
 ---
 id: institucional
 blueprint: page
-title: Institucional
+title: Nosotros
 template: pages/page
 hero_title: Historia
 hero_subtitle: 'Nuestra historia comienza a escribirse en el año 1964. El comienzo fue en el rubro materiales para la construcción y el paso del tiempo, sumado a la vocación de crecimiento; nos permitieron incursionar en otros mercados.'
@@ -9,8 +9,8 @@ seo_title: 'Quiénes Somos | Transportes Montalván S.A.'
 seo_description: 'Más de 40 años brindando servicios de transporte, logística y almacenaje fiscal en Argentina. Conocé nuestra empresa, valores y trayectoria'
 hero_image: 2.jpg
 parent: home
-updated_by: 3fcab919-9bd4-4db5-8f93-bf9cc9b2d336
-updated_at: 1778762266
+updated_by: e4400a2c-0b7e-454c-b58b-5c9623b16fd0
+updated_at: 1791920761
 content:
   -
     type: paragraph

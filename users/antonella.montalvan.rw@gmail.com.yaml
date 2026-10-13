@@ -1,0 +1,10 @@
+name: Antonella
+super: true
+id: e4400a2c-0b7e-454c-b58b-5c9623b16fd0
+password_hash: $2y$12$lAJ8fMhu9gzAP/muUqZ5/OtFzWgvOfpQHMhpOo.30R6npjoirlcDC
+preferences:
+  collections:
+    services:
+      view: list
+    pages:
+      view: tree

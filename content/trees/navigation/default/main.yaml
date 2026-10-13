@@ -2,6 +2,7 @@ tree:
   -
     id: 6c387706-ce6b-4785-a2d6-84d7d131fbdf
     entry: home
+    title: Home
   -
     id: 4ce3b965-af55-45ac-be9d-755b42db6166
     entry: institucional
